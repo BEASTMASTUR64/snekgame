@@ -3,7 +3,6 @@
 <head>
 	<meta charset="UTF-8">
 	<title>snekgame</title>
-	
 	<link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body>
@@ -31,7 +30,7 @@ keystate,
 frames,
 pauseGame = false,   
 score;	  
- 
+ //gör boxen
 grid = {
  
 	width: null,  
@@ -63,7 +62,7 @@ grid = {
 	}
 }
  
- 
+ //Gör så att snek dör om han går utanför boxen
 snake = {
  
 	direction: null, 
@@ -144,7 +143,7 @@ function main() {
 	loop();
 }
  
- 
+ //reset funktionen händer alltid när snek krockar med väggen eller sig själv
 function init() {
 	score = 0;
  
@@ -167,7 +166,7 @@ function loop() {
 	
 }
  
- 
+ //Gör så att snek kan int gå in i sig själv
 function update() {
 	frames++;
  
@@ -191,7 +190,7 @@ function update() {
 	var nx = snake.last.x;
 	var ny = snake.last.y;
  
-		
+	//Snek movements	
 	switch (snake.direction) {
 	case LEFT:
 	nx--;
@@ -216,7 +215,7 @@ function update() {
     alert('fail')
     pauseGame = true
 	}
- 
+    //Alltid när snek äter så blir han större
 	if (grid.get(nx, ny) === FRUIT) {
 		
 	score++;
@@ -232,7 +231,7 @@ function update() {
 	}
 }
  
- 
+ // Stylar och ger färg till spelet
 function draw() {
 	
 	var tw = canvas.width/grid.width;
@@ -246,10 +245,11 @@ function draw() {
 	ctx.fillStyle = "#fff";
 	break;
 	case SNAKE:
-	ctx.fillStyle = "#000";
+	ctx.fillStyle = "#333";
 	break;
 	case FRUIT:
 	ctx.fillStyle = "#ff0000";
+	ctx.fillStyle = "#009BFF";
 	break;
 	}
 	ctx.fillRect(x*tw, y*th, tw, th);
@@ -257,7 +257,7 @@ function draw() {
 	}
 	
 	ctx.fillStyle = "#000";
-	ctx.fillText("SCORE: " + score, 10, canvas.height-500);
+	ctx.fillText("SCORE: " + score, 10, canvas.height-10);
 }
  
  
