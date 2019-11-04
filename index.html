@@ -230,10 +230,10 @@ function draw() {
 	ctx.fillStyle = "#fff";
 	break;
 	case SNAKE:
-	ctx.fillStyle = "#333";
+	ctx.fillStyle = "#000";
 	break;
 	case FRUIT:
-	ctx.fillStyle = "#009BFF";
+	ctx.fillStyle = "#f03912";
 	break;
 	}
 	ctx.fillRect(x*tw, y*th, tw, th);
@@ -241,7 +241,7 @@ function draw() {
 	}
 	
 	ctx.fillStyle = "#000";
-	ctx.fillText("SCORE: " + score, 10, canvas.height-10);
+	ctx.fillText("SCORE: " + score, 10, canvas.height-500);
 }
  
  
