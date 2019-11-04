@@ -7,6 +7,9 @@
 	<link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body>
+    <button onclick="playagain()">
+        GO AGANE
+    </button>
 <script>
 var
 COLS = 26,
@@ -25,7 +28,8 @@ KEY_DOWN  = 40,
 canvas,	  
 ctx,	  
 keystate, 
-frames,   
+frames,
+pauseGame = false,   
 score;	  
  
 grid = {
@@ -89,6 +93,11 @@ snake = {
 };
  
  
+function playagain() {
+    pauseGame=false
+    main()
+}
+
 function setFood() {
 	var empty = [];
 	
@@ -104,6 +113,9 @@ function setFood() {
 	grid.set(FRUIT, randpos.x, randpos.y);
 }
  
+function pause() {
+
+}
  
 function main() {
 	
@@ -149,8 +161,10 @@ function init() {
 function loop() {
 	update();
 	draw();
+	if (!pauseGame) {
+        window.requestAnimationFrame(loop, canvas);
+    }
 	
-	window.requestAnimationFrame(loop, canvas);
 }
  
  
@@ -198,7 +212,9 @@ function update() {
 	0 > ny || ny > grid.height-1 ||
 	grid.get(nx, ny) === SNAKE
 	) {
-	return init();
+	//return init();
+    alert('fail')
+    pauseGame = true
 	}
  
 	if (grid.get(nx, ny) === FRUIT) {
