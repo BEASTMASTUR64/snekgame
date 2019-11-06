@@ -50,3 +50,8 @@ body,html{
     position: absolute;
     right:0;
 }
+.headline {
+    position: absolute;
+    right:700px;
+    font-size: 60px;
+}
