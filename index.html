@@ -8,15 +8,10 @@
 <body>
     <button onclick="playagain()">
         GO AGANE
-    </button>
-    <div id="ScoreHistory">
-
-    </div>
-    <grid>
-
-    </grid>
+	</button>
+	
 <script>
-//Sätter värde på alla dedär
+	// Sätter värde på alla dedär
 var
 COLS = 26,
 ROWS = 26,
@@ -35,10 +30,9 @@ canvas,
 ctx,	  
 keystate, 
 frames,
-pauseGame = false,
-scoreHistory = [],   
+pauseGame = false,   
 score;	  
-//gör boxen
+ //gör boxen
 grid = {
  
 	width: null,  
@@ -102,9 +96,6 @@ snake = {
  
 function playagain() {
     pauseGame=false
-    scoreHistory.push(score)
-    document.getElementById('ScoreHistory').innerText=scoreHistory
-    
     main()
 }
 
@@ -126,7 +117,7 @@ function setFood() {
 function pause() {
 
 }
-// fixar canvasen till snek game
+ //fixar canvaset för snek game
 function main() {
 	
 	canvas = document.createElement("canvas");
@@ -167,7 +158,7 @@ function init() {
 	setFood();
 }
  
- 
+ //paussar spelet om du dör
 function loop() {
 	update();
 	draw();
@@ -259,7 +250,7 @@ function draw() {
 	ctx.fillStyle = "#333";
 	break;
 	case FRUIT:
-	ctx.fillStyle = "#d60000";
+	ctx.fillStyle = "#ff0000";
 	ctx.fillStyle = "#009BFF";
 	break;
 	}
@@ -268,7 +259,7 @@ function draw() {
 	}
 	
 	ctx.fillStyle = "#000";
-	ctx.fillText("SCORE: " + score, 10, canvas.height-500);
+	ctx.fillText("SCORE: " + score, 10, canvas.height-10);
 }
  
  
