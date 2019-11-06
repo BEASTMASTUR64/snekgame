@@ -8,13 +8,11 @@
 <body>
     <button onclick="playagain()">
         GO AGANE
-    </button>
-    <div id="ScoreHistory">
+	</button>
+	<h1 style="color: white;">Score History</h1>
+    <div id="ScoreHistory" class="ScoreHistory">
 
     </div>
-    <grid>
-
-    </grid>
 <script>
 var
 COLS = 26,
@@ -102,7 +100,7 @@ snake = {
 function playagain() {
     pauseGame=false
     scoreHistory.push(score)
-    document.getElementById('ScoreHistory').innerText=scoreHistory
+    document.getElementById('ScoreHistory').innerText=scoreHistory.join('\n')
     
     main()
 }

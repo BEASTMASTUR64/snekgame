@@ -28,3 +28,17 @@ body,html{
     top: 180px;
     z-index: -1;
   }
+
+.ScoreHistory {
+    font-size: 30px;
+    background-color: white;
+    background-position: top left;
+    border-style: solid;
+    border-width: 5px;
+    border-color: rgb(148, 138, 138);
+    border-radius: 25px;
+    width: 150px;
+    min-height: 250px; 
+    padding: 20px;
+    position: absolute;
+}
