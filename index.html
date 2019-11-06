@@ -9,6 +9,12 @@
     <button onclick="playagain()">
         GO AGANE
     </button>
+    <div id="ScoreHistory">
+
+    </div>
+    <grid>
+
+    </grid>
 <script>
 var
 COLS = 26,
@@ -28,7 +34,8 @@ canvas,
 ctx,	  
 keystate, 
 frames,
-pauseGame = false,   
+pauseGame = false,
+scoreHistory = [],   
 score;	  
  //gör boxen
 grid = {
@@ -94,6 +101,9 @@ snake = {
  
 function playagain() {
     pauseGame=false
+    scoreHistory.push(score)
+    document.getElementById('ScoreHistory').innerText=scoreHistory
+    
     main()
 }
 
