@@ -45,15 +45,25 @@ body,html{
     width: 150px;
     min-height: 250px; 
     padding: 20px;
+    top: 85px;
     position: absolute;
 }
 .snake {
     position: absolute;
     right:0;
+    top: 0;
     z-index: -1;
 }
 .headline {
     position: absolute;
-    right:700px;
+    right:42.5%;
     font-size: 60px;
+    overflow: hidden;
+    z-index: 0;
+}
+.Score {
+    color: black;
+    width: 200px;
+    overflow: hidden;
+    position: absolute;
 }
