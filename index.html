@@ -255,6 +255,7 @@ function draw() {
 	switch (grid.get(x, y)) {
 	case EMPTY:
 	ctx.fillStyle = "#fff";
+	ctx.strokeStyle = "rgb(180, 180, 180)";
 	break;
 	case SNAKE:
 	ctx.fillStyle = "#333";
@@ -265,6 +266,7 @@ function draw() {
 	break;
 	}
 	ctx.fillRect(x*tw, y*th, tw, th);
+	ctx.strokeRect(x*tw, y*th, tw, th);
 	}
 	}
 	
