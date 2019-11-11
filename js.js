@@ -23,6 +23,7 @@ var scoreHistory = []
 var score
 var grid = null
 var snake = null
+var reqid = null
 // gör boxen
 grid = {
 
@@ -81,8 +82,12 @@ function playagain () {
   pauseGame = false
   scoreHistory.push(score)
   document.getElementById('ScoreHistory').innerText = scoreHistory.join('\n')
+  window.cancelAnimationFrame(reqid)
 
-  main()
+  frames = 0
+
+  init()
+  loop()
 }
 
 function setFood () {
@@ -143,13 +148,14 @@ function loop () {
   update()
   draw()
   if (!pauseGame) {
-    window.requestAnimationFrame(loop, canvas)
+    reqid = window.requestAnimationFrame(loop, canvas)
   }
 }
 
 // Gör så att snek kan int gå in i sig själv
 function update () {
   frames++
+  console.log('text', frames)
 
   if (keystate[KEY_LEFT] && snake.direction !== RIGHT) {
     snake.direction = LEFT
