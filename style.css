@@ -43,10 +43,11 @@ body,html{
     border-color: rgb(35, 61, 22);
     border-radius: 25px;
     width: 150px;
-    min-height: 250px; 
+    height: 250px; 
     padding: 20px;
     top: 85px;
     position: absolute;
+    overflow: auto;
 }
 .snake {
     position: absolute;
@@ -67,3 +68,22 @@ body,html{
     overflow: hidden;
     position: absolute;
 }
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
