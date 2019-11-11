@@ -79,6 +79,7 @@ snake = {
 
 // eslint-disable-next-line no-unused-vars
 function playagain () {
+  snake.direction = UP
   pauseGame = false
   scoreHistory.push(score)
   document.getElementById('ScoreHistory').innerText = scoreHistory.join('\n')
