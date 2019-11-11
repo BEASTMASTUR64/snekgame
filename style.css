@@ -59,7 +59,7 @@ body,html{
     position: absolute;
     right:41.5%;
     font-size: 60px;
-    overflow: hidden;
+    overflow: visible;
     z-index: 0;
 }
 .Score {
