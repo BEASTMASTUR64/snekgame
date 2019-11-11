@@ -57,10 +57,12 @@ body,html{
 }
 .headline {
     position: absolute;
-    right:41.5%;
-    font-size: 60px;
+    right:42.5%;
+    bottom: 82%;
+    font-size: 75px;
     overflow: visible;
     z-index: 0;
+    font-family: grand hotel;
 }
 .Score {
     color: black;
