@@ -84,6 +84,7 @@ function playagain () {
   scoreHistory.push(score)
   document.getElementById('ScoreHistory').innerText = scoreHistory.join('\n')
   window.cancelAnimationFrame(reqid)
+  document.getElementById ("game-over").style.display='none'
 
   frames = 0
 

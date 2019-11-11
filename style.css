@@ -69,6 +69,7 @@ body,html{
 .Score {
     color: black;
     width: 200px;
+    left: 1%;
     overflow: hidden;
     position: absolute;
     font-family: 'Yeon Sung', cursive;
