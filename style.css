@@ -32,10 +32,12 @@ body,html{
     border-width: 5px;
     border-color: rgb(35, 61, 22);
     border-radius: 25px;
+    font-family: 'Yeon Sung', cursive;
   }
 
 .ScoreHistory {
     font-size: 30px;
+    font-family: 'Yeon Sung', cursive;
     background-color:rgb(97, 196, 51);
     background-position: top left;
     border-style: solid;
@@ -57,18 +59,19 @@ body,html{
 }
 .headline {
     position: absolute;
-    right:42.5%;
+    right:40.7%;
     bottom: 82%;
     font-size: 75px;
     overflow: visible;
     z-index: 0;
-    font-family: grand hotel;
+    font-family: 'Yeon Sung', cursive;
 }
 .Score {
     color: black;
     width: 200px;
     overflow: hidden;
     position: absolute;
+    font-family: 'Yeon Sung', cursive;
 }
 /* width */
 ::-webkit-scrollbar {
@@ -88,4 +91,11 @@ body,html{
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
     background: #555; 
+  }
+
+  .gameover {
+      position: absolute;
+      bottom: 43%;
+      left: 33.20%;
+      z-index: 9999;
   }

@@ -192,11 +192,11 @@ function update () {
 
     if (nx < 0 || nx > grid.width - 1 ||
 	ny < 0 || ny > grid.height - 1 ||
-	grid.get(nx, ny) === SNAKE
+  (grid.get(nx, ny) === SNAKE && score > 2)
     ) {
       // return init();
-      alert('fail')
       pauseGame = true
+      document.getElementById ("game-over").style.display='block'
     }
     // Alltid när snek äter så blir han större
     if (grid.get(nx, ny) === FRUIT) {
