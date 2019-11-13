@@ -109,6 +109,7 @@ function setFood () {
 
 // fixar canvaset för snek game
 function main () {
+  document.getElementById('background-audio').play()
   canvas = document.createElement('canvas')
   canvas.width = COLS * 20
   canvas.height = ROWS * 20
@@ -176,7 +177,7 @@ function update () {
     var nx = snake.last.x
     var ny = snake.last.y
 
-    // Snek movements
+	// Snek movements
     switch (snake.direction) {
       case LEFT:
         nx--
@@ -197,13 +198,15 @@ function update () {
   (grid.get(nx, ny) === SNAKE && score > 2)
     ) {
       // return init();
-      pauseGame = true
+	  pauseGame = true
+	  document.getElementById('gameover-audio').play()
       document.getElementById ("game-over").style.display='block'
     }
     // Alltid när snek äter så blir han större
     if (grid.get(nx, ny) === FRUIT) {
       score++
-      setFood()
+	  setFood()
+	  document.getElementById("audio").play()
     } else {
       var tail = snake.remove()
       grid.set(EMPTY, tail.x, tail.y)
@@ -218,6 +221,7 @@ function update () {
 function draw () {
   var tw = canvas.width / grid.width
   var th = canvas.height / grid.height
+
 
   for (var x = 0; x < grid.width; x++) {
     for (var y = 0; y < grid.height; y++) {
