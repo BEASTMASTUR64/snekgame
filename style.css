@@ -25,8 +25,8 @@ body,html{
     display: inline-block;
     font-size: 16px;
     position: absolute;
-    left: 46.4%;
-    top: 130px;
+    left: 45.3%;
+    top: 137px;
     z-index: -1;
     border-style: solid;
     border-width: 5px;
@@ -59,9 +59,9 @@ body,html{
 }
 .headline {
     position: absolute;
-    right:40.7%;
-    bottom: 82%;
-    font-size: 75px;
+    right:35%;
+    bottom: 84%;
+    font-size: 63px;
     overflow: visible;
     z-index: 0;
     font-family: 'Press Start 2P', cursive;
